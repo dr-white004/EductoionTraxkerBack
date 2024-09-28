@@ -22,12 +22,12 @@ from datetime import timedelta
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*az0ufj=7pr(f24l896&4r@7rhvm=(2xlo4=b!p2)u4-n%35p='
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-*az0ufj=7pr(f24l896&4r@7rhvm=(2xlo4=b!p2)u4-n%35p=')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
 
 
 # Application definition
