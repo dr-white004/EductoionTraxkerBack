@@ -1,0 +1,15 @@
+# Python
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+ENV/
+.env
+
+
+# Static files
+/static/
+
+# Media files
+/media/
