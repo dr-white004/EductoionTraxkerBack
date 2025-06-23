@@ -10,7 +10,7 @@ from rest_framework.permissions import AllowAny,IsAuthenticated
 from .models import User, Book, Chapter, Lesson
 from .serializers import UserSerializer, BookSerializer,ChapterSerializer,LessonSerializer
 from rest_framework.views import APIView
-from django.http import JsonResponse
+from django.http import JsonResponse, Http404
 from django.db.models import Count
 from rest_framework import permissions
 from django.contrib.auth.decorators import login_required
